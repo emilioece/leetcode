@@ -14,7 +14,7 @@ def remdupe(nums:list) -> int:
             index +=1
             count = 1
         prev = nums[i]
-    print(index)
+    return index
 
 
 

@@ -4,7 +4,7 @@ def remove(nums:list, val:int):
     while val in nums:
         nums.remove(val)
         k-=1
-    print(nums, k)
+    return k
 
 if __name__ == '__main__':
     nums = [0,1,2,2,3,0,4,2]
