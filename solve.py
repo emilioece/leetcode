@@ -2,17 +2,26 @@ def split_array(ipt: str) -> list:
     ll = []
     exclude = {'[', ']'}
     split = {' ', ','}
+    count = 0
+    
     for x in exclude:
         if x in ipt:
             ipt = ipt.replace(x, '')
+            count+=1
 
+    
+    
+    
     for x in split:
         if x in ipt:
             ll = [int(num) for num in ipt.split(x) if num.strip()]
-            return ll
+    if ll:
+        return ll 
+    else:
+        ll.append(int(ipt))
 
+    
     return ll
-
 def cin(type: str):
     x = input()
     if type == 'arr':
@@ -23,8 +32,11 @@ def cin(type: str):
         return str(x)
     else:
         print('Type not found.')
+def parr(ll: list):
+    for i, ans in enumerate(ll):
+        print(f'Case #{i+1}: {ans}')
 
 if __name__ == "__main__":
-    t = cin('int')
     nums = cin('arr')
+    print(nums)
 
