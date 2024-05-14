@@ -9,9 +9,6 @@ def split_array(ipt: str) -> list:
             ipt = ipt.replace(x, '')
             count+=1
 
-    
-    
-    
     for x in split:
         if x in ipt:
             ll = [int(num) for num in ipt.split(x) if num.strip()]
@@ -22,7 +19,7 @@ def split_array(ipt: str) -> list:
 
     
     return ll
-def cin(type: str):
+def cin(type: str) -> list | int | str:
     x = input()
     if type == 'arr':
         return split_array(x)
@@ -32,9 +29,18 @@ def cin(type: str):
         return str(x)
     else:
         print('Type not found.')
+        return None
+
 def parr(ll: list):
     for i, ans in enumerate(ll):
         print(f'Case #{i+1}: {ans}')
+
+def output(t:int, type:str):
+    output = []
+    for i in range(t):
+        nums = cin(type)
+        output.append(nums)
+    return output
 
 if __name__ == "__main__":
     nums = cin('arr')
