@@ -1,0 +1,29 @@
+{
+	"if(main)": {
+		"prefix": "__main__",
+		"body": [
+			"if __name__ == \"__main__\":",
+			"    ${1:pass}"
+		],
+		"description": "`if __name__ == \"__main__\": ...` block"
+	},
+	"solving": {
+		"prefix": "__solving__",
+		"body": [
+			"def solve(func):",
+			"    from solve import cin, parr, output",
+			"    ans = []",
+			"    t = cin('int')",
+			"    for i in range(t):",
+			"        nums = cin('arr')",
+			"        ans.append(func(nums))",
+			"                          ",
+			"    opt = output(t, 'arr')",
+			"    parr(ans)",
+			"    print('expected output:')",
+			"    parr(opt)"
+		],
+		"description": "solve function block"
+	}
+}
+
